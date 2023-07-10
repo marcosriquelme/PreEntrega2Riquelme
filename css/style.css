@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar .navbar-brand {
+    text-shadow: 0 0 3px #000, 0 0 3px #000;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.navbar .nav-link {
+    font-weight: bold;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.navbar .nav-link:hover {
+    text-shadow: 0 0 5px #000, 0 0 5px #000;
+}
+
+
+h5 {
+    text-shadow: 0 0 3px #000, 0 0 3px #000;
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif
+}
