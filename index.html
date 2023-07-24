@@ -9,83 +9,187 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="js/compra.js"></script>
     <script defer src="js/main.js"></script>
+    <script  src="js/productos.js"></script>
     <title>super🛒riqui</title>
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">super🛒riqui</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
-                aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Inicio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">productos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled">🛒</a>
-                    </li>
-                </ul>
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Buscar</button>
-                </form>
-            </div>
-        </div>
-    </nav>
+    <h1>super🛒riqui </h1>
+    <p>Selecciona tu(s) producto(s) de interés. Guárdalos en el Carrito o en tus Favoritos.</p>
+    <hr>
+    <input type="search" id="inputSearch" placeholder="🔍 Nombre del producto a buscar">
+    <div class="toast-msg"></div>
+    <hr>
+    <table>
+        <thead>
+            <tr>
+                <th>Código</th>
+                <th>Imagen</th>
+                <th>Descripción</th>
+                <th>importe</th>
+                <th>Favs</th>
+            </tr>
+        </thead>
+        <tbody id="tablaProductos">
+
+        </tbody>
+    </table>
     <h5>Nuestros productos</h5>
-    <div class="card-group">
-        <div class="card">
-            <img src="img/jabon liquido.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h4 class="card-title">Jabon Liquido 3l</h4>
-                <p class="card-text">Codigo de producto:1</p>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+            <div class="card h-100">
+                <img src="img/aceite.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">aceite natura 900ml</h5>
+                    <p class="card-text">codigo 1</p>
+                </div>
+                <div class="card-footer">
+                    <small class="text-muted">$650</small>
+                </div>
             </div>
         </div>
-        <div class="card">
-            <img src="img/aceite.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h4 class="card-title">Aceite 900ml</h4>
-                <p class="card-text">Codigo de producto:2</p>
+        <div class="col">
+            <div class="card h-100">
+                <img src="img/arroz.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Arroz Gallo 1k</h5>
+                    <p class="card-text">codigo 2</p>
+                </div>
+                <div class="card-footer">
+                    <small class="text-muted">$400</small>
+                </div>
             </div>
         </div>
-        <div class="card">
-            <img src="img/leche sachet.png" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h4 class="card-title">leche descremada 1litro</h4>
-                <p class="card-text">Codigo de producto:3</p>
-            </div>
-        </div>
-    </div>
-    <div class="card-group">
-        <div class="card">
-            <img src="img/arroz.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h4 class="card-title">Arroz gallo oro 1k</h4>
-                <p class="card-text">Codigo de producto:4</p>
-            </div>
-        </div>
-        <div class="card">
-            <img src="img/mayonesa.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h4 class="card-title">Mayonesa Natura 500g </h4>
-                <p class="card-text">Codigo de producto:5</p>
-            </div>
-        </div>
-        <div class="card">
-            <img src="img/savora.png" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h4 class="card-title">Savora 500g</h4>
-                <p class="card-text">Codigo de producto:6</p>
+        <div class="col">
+            <div class="card h-100">
+                <img src="img/azúcar1k.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Azucar 1k</h5>
+                    <p class="card-text">codigo 3</p>
+                </div>
+                <div class="card-footer">
+                    <small class="text-muted">$650</small>
+                </div>
             </div>
         </div>
     </div>
+
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+            <div class="card h-100">
+                <img src="img/atun_campagnola.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Atun la campagnola 170g</h5>
+                    <p class="card-text">codigo 4</p>
+                </div>
+                <div class="card-footer">
+                    <small class="text-muted">$800</small>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100">
+                <img src="img/cafe_rojo_170.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">nescafe 400g</h5>
+                    <p class="card-text">codigo 5</p>
+                </div>
+                <div class="card-footer">
+                    <small class="text-muted">$1200</small>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100">
+                <img src="img/Dulce-de-leche-La-Serenisima-Colonial.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Dulce de leche La Serenisima</h5>
+                    <p class="card-text">codigo 6</p>
+                </div>
+                <div class="card-footer">
+                    <small class="text-muted">$500</small>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+            <div class="card h-100">
+                <img src="img/fideos-tirabuzón.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">fideos tirabuzón</h5>
+                    <p class="card-text">codigo 7</p>
+                </div>
+                <div class="card-footer">
+                    <small class="text-muted">$250</small>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100">
+                <img src="img/jabon liquido.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">jabon liquido 900g</h5>
+                    <p class="card-text">codigo 8</p>
+                </div>
+                <div class="card-footer">
+                    <small class="text-muted">$1650</small>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100">
+                <img src="img/leche sachet.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">leche sachet 1l</h5>
+                    <p class="card-text">codigo 9</p>
+                </div>
+                <div class="card-footer">
+                    <small class="text-muted">$280</small>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+            <div class="card h-100">
+                <img src="img/silk-almendrachocolatada.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">almendra/chocolatada</h5>
+                    <p class="card-text">codigo 10</p>
+                </div>
+                <div class="card-footer">
+                    <small class="text-muted">$950</small>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100">
+                <img src="img/savora.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">savora 500g</h5>
+                    <p class="card-text">codigo 11</p>
+                </div>
+                <div class="card-footer">
+                    <small class="text-muted">$350</small>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100">
+                <img src="img/mayonesa.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">mayonesa 500g</h5>
+                    <p class="card-text">codigo 12</p>
+                </div>
+                <div class="card-footer">
+                    <small class="text-muted">$380</small>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
 
 
 

@@ -1,27 +1,75 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
-.navbar .navbar-brand {
-    text-shadow: 0 0 3px #000, 0 0 3px #000;
-    font-weight: bold;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+body{
+    background-color: #000;
+}
+html {
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    color-scheme: dark;
+    margin: 8px;
 }
 
-.navbar .nav-link {
-    font-weight: bold;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+p,
+select,
+input,
+span {
+    font-size: large;
 }
 
-.navbar .nav-link:hover {
-    text-shadow: 0 0 5px #000, 0 0 5px #000;
+table {
+    width: 90% !important;
+    margin-left: 5%;
+}
+
+.emoji-image {
+    font-size: 24px;
+}
+
+thead {
+    font-weight: 800;
+    font-size: larger;
+}
+
+tbody tr:hover {
+    background: rgba(0, 0, 0, 0.679);
+}
+
+.button-big-emoji {
+    font-size: x-large;
+}
+
+.toast-msg {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    height: 46px;
+    width: 100%;
+    background-color: darkslateblue;
+    color: whitesmoke;
+    border-radius: 6px;
+    font-size: larger;
 }
 
 
 h5 {
+    text-align: center;
     text-shadow: 0 0 3px #000, 0 0 3px #000;
     font-weight: bold;
     font-family: Georgia, 'Times New Roman', Times, serif
+    
 }
+
+
+.card-footer {
+    text-align: center;
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif
+
+}
+
