@@ -4,6 +4,19 @@ const buybtn = document.querySelector('button#buyBtn')
 const eptyDiv = document.querySelector('div.epty-cart')
 const searchBar = document.querySelector('input#search-bar.search-input')
 
+// function shoppingCard(prod) {
+//     return `<div class="cards">
+//                 <div class="product-name"><h3>${prod.model}</h3></div>
+//                 <div class="product-img">
+//                     <img src="${prod.img}" alt="${prod.model}">
+//                 </div>
+//                 <div class="info-box">
+//                     <div class="product-size">${prod.size}</div>
+//                     <div class="product-price">$ ${prod.price}</div>
+//                     <button id='${prod.id}'class="delete-button">delete</button>
+//                 </div>
+//             </div>`
+// }
 function shoppingCard(prod) {
     return `<div class="cards">
                 <div class="product-name"><h3>${prod.model}</h3></div>
@@ -11,12 +24,23 @@ function shoppingCard(prod) {
                     <img src="${prod.img}" alt="${prod.model}">
                 </div>
                 <div class="info-box">
-                    <div class="product-size">${prod.size}</div>
+                    <div class="product-size">
+                        ${
+                            prod.selectedSize
+                                ? `Size: ${prod.selectedSize}`
+                                : `<label for="size">Size: 
+                                    <select id="sizeList" name="sizeList">
+                                        <option selected disabled>Select size</option>
+                                        ${prod.size.map((talla) => `<option>${talla}</option>`).join('')}
+                                    </select>
+                                </label>`
+                        }
+                    </div>
                     <div class="product-price">$ ${prod.price}</div>
-                    <button id='${prod.id}'class="delete-button">delete</button>
+                    <button id='${prod.id}' class="delete-button">delete</button>
                 </div>
-            </div>`
-}
+            </div>`;
+        }
 
 function showShoppingCart() {
     shoppingCards.innerHTML = ''
