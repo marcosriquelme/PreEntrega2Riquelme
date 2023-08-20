@@ -1,203 +1,62 @@
-<!DOCTYPE html>
-<html lang="es">
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <title>Gorras Riqui</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/compra.js"></script>
-    <script defer src="js/main.js"></script>
-    <script  src="js/productos.js"></script>
-    <title>super🛒riqui</title>
+    <script src="js/productos.js"></script>
+    <script defer src="js/index.js"></script> 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 </head>
-
 <body>
-    <h1>super🛒riqui </h1>
-    <p>Selecciona tu(s) producto(s) de interés. Guárdalos en el Carrito o en tus Favoritos.</p>
-    <hr>
-    <input type="search" id="inputSearch" placeholder="🔍 Nombre del producto a buscar">
-    <div class="toast-msg"></div>
-    <hr>
-    <table>
-        <thead>
-            <tr>
-                <th>Código</th>
-                <th>Imagen</th>
-                <th>Descripción</th>
-                <th>importe</th>
-                <th>Favs</th>
-            </tr>
-        </thead>
-        <tbody id="tablaProductos">
-
-        </tbody>
-    </table>
-    <h5>Nuestros productos</h5>
-    <div class="row row-cols-1 row-cols-md-3 g-4">
-        <div class="col">
-            <div class="card h-100">
-                <img src="img/aceite.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">aceite natura 900ml</h5>
-                    <p class="card-text">codigo 1</p>
+    <header>
+        <nav class="navbar navbar-expand-lg">
+                <div class="container-fluid nav-container">
+                    <div class="logo-titulo">
+                <a class="navbar-brand" href="#">
+                    <img class="logo" src="./img/1000_WHITE.png" alt="logo">
+                </a>
+                <h1 class="titulo">
+                    Gorras Riqui
+                </h1>
+                    </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#section-card">Models</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class='nav-link' href='./pages/cart.html'>Cart</a>
+                    </li>
+                    </ul>
                 </div>
-                <div class="card-footer">
-                    <small class="text-muted">$650</small>
                 </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card h-100">
-                <img src="img/arroz.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Arroz Gallo 1k</h5>
-                    <p class="card-text">codigo 2</p>
-                </div>
-                <div class="card-footer">
-                    <small class="text-muted">$400</small>
-                </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card h-100">
-                <img src="img/azúcar1k.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Azucar 1k</h5>
-                    <p class="card-text">codigo 3</p>
-                </div>
-                <div class="card-footer">
-                    <small class="text-muted">$650</small>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="row row-cols-1 row-cols-md-3 g-4">
-        <div class="col">
-            <div class="card h-100">
-                <img src="img/atun_campagnola.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Atun la campagnola 170g</h5>
-                    <p class="card-text">codigo 4</p>
-                </div>
-                <div class="card-footer">
-                    <small class="text-muted">$800</small>
-                </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card h-100">
-                <img src="img/cafe_rojo_170.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">nescafe 400g</h5>
-                    <p class="card-text">codigo 5</p>
-                </div>
-                <div class="card-footer">
-                    <small class="text-muted">$1200</small>
-                </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card h-100">
-                <img src="img/Dulce-de-leche-La-Serenisima-Colonial.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Dulce de leche La Serenisima</h5>
-                    <p class="card-text">codigo 6</p>
-                </div>
-                <div class="card-footer">
-                    <small class="text-muted">$500</small>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="row row-cols-1 row-cols-md-3 g-4">
-        <div class="col">
-            <div class="card h-100">
-                <img src="img/fideos-tirabuzón.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">fideos tirabuzón</h5>
-                    <p class="card-text">codigo 7</p>
-                </div>
-                <div class="card-footer">
-                    <small class="text-muted">$250</small>
-                </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card h-100">
-                <img src="img/jabon liquido.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">jabon liquido 900g</h5>
-                    <p class="card-text">codigo 8</p>
-                </div>
-                <div class="card-footer">
-                    <small class="text-muted">$1650</small>
-                </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card h-100">
-                <img src="img/leche sachet.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">leche sachet 1l</h5>
-                    <p class="card-text">codigo 9</p>
-                </div>
-                <div class="card-footer">
-                    <small class="text-muted">$280</small>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="row row-cols-1 row-cols-md-3 g-4">
-        <div class="col">
-            <div class="card h-100">
-                <img src="img/silk-almendrachocolatada.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">almendra/chocolatada</h5>
-                    <p class="card-text">codigo 10</p>
-                </div>
-                <div class="card-footer">
-                    <small class="text-muted">$950</small>
-                </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card h-100">
-                <img src="img/savora.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">savora 500g</h5>
-                    <p class="card-text">codigo 11</p>
-                </div>
-                <div class="card-footer">
-                    <small class="text-muted">$350</small>
-                </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card h-100">
-                <img src="img/mayonesa.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">mayonesa 500g</h5>
-                    <p class="card-text">codigo 12</p>
-                </div>
-                <div class="card-footer">
-                    <small class="text-muted">$380</small>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-
-
-
-
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
-        crossorigin="anonymous"></script>
+            </nav>
+    </header>
+    <main>
+        <section class="section-search">
+            <input type="search" name="search-bar" class="search-input" id="search-bar" placeholder="Search   🔍" >
+        </section>
+        <h2>models available</h2>
+        <section class="section-cards" id="section-card">
+            <label id="sizess" for="size">Size: 
+                <select id="sizeList" name="sizeList" id="size">
+                    <option selected disabled>Select Size</option>
+                </select>
+            </label>
+        </section>
+            
+    </main>
+    <footer></footer>
 </body>
-
 </html>
