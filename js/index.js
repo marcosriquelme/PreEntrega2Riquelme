@@ -1,6 +1,6 @@
 const cards = document.querySelector('section.section-cards#section-card')
 const searchBar = document.querySelector('input#search-bar.search-input')
-const sizes = document.querySelector('label#sizess')
+
 
 function card(prod) {
     return `<div class="cards">
@@ -9,7 +9,6 @@ function card(prod) {
                     <img src="${prod.img}" alt="${prod.model}">
                 </div>
                 <div class="info-box">
-                    <div class="product-size">${sizes.innerHTML}<div>
                     <div class="product-price">$ ${prod.price}</div>
                     <button class="card-button" id="${prod.id}">Seleccionar</button>
                 </div>
